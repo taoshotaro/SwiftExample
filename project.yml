@@ -1,0 +1,36 @@
+name: SwiftExample
+configs:
+  Debug: debug
+  Release: release
+configFiles:
+  Debug: Configs/Debug.xcconfig
+  Release: Configs/Release.xcconfig
+options:
+  groupSortPosition: top
+
+schemes:
+  StoryboardUIKitAppDelegate:
+    build:
+      targets:
+        StoryboardUIKitAppDelegate: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+
+targets:
+  StoryboardUIKitAppDelegate:
+    type: application
+    platform: iOS
+    sources: 
+      - StoryboardUIKitAppDelegate
+      - Configs
+    dependencies:
+      - framework: ./Frameworks/SpotifyiOS.xcframework
