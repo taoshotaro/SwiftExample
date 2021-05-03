@@ -13,17 +13,11 @@ schemes:
     build:
       targets:
         StoryboardUIKitAppDelegate: all
-    run:
-      config: Debug
-    test:
-      config: Debug
-      gatherCoverageData: true
-    profile:
-      config: Release
-    analyze:
-      config: Debug
-    archive:
-      config: Release
+
+  SwiftUIUIKitAppDelegate:
+    build:
+      targets:
+        SwiftUIUIKitAppDelegate: all
 
 targets:
   StoryboardUIKitAppDelegate:
@@ -34,3 +28,10 @@ targets:
       - Configs
     dependencies:
       - framework: ./Frameworks/SpotifyiOS.xcframework
+
+  SwiftUIUIKitAppDelegate:
+    type: application
+    platform: iOS
+    sources: 
+      - SwiftUIUIKitAppDelegate
+      - Configs
