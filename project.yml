@@ -8,22 +8,21 @@ configFiles:
 options:
   groupSortPosition: top
 
+packages:
+  OAuthSwift:
+    url: https://github.com/OAuthSwift/OAuthSwift.git
+    from: 2.1.0
+
 schemes:
   StoryboardUIKitAppDelegate:
     build:
       targets:
         StoryboardUIKitAppDelegate: all
-    run:
-      config: Debug
-    test:
-      config: Debug
-      gatherCoverageData: true
-    profile:
-      config: Release
-    analyze:
-      config: Debug
-    archive:
-      config: Release
+
+  SpotifyExample:
+    build:
+      targets:
+        SpotifyExample: all
 
 targets:
   StoryboardUIKitAppDelegate:
@@ -32,5 +31,21 @@ targets:
     sources: 
       - StoryboardUIKitAppDelegate
       - Configs
+
+  SpotifyExample:
+    type: application
+    platform: iOS
+    sources: 
+      - SpotifyExample
+      - Configs
     dependencies:
       - framework: ./Frameworks/SpotifyiOS.xcframework
+
+  SpotifyPKCE:
+    type: application
+    platform: iOS
+    sources: 
+      - SpotifyPKCE
+      - Configs
+    dependencies:
+      - package: OAuthSwift
