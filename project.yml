@@ -14,6 +14,16 @@ schemes:
       targets:
         StoryboardUIKitAppDelegate: all
 
+  SpotifyExample:
+    build:
+      targets:
+        SpotifyExample: all
+
+  SpotifyPKCE:
+    build:
+        targets:
+          SpotifyPKCE: all
+
   SwiftUIUIKitAppDelegate:
     build:
       targets:
@@ -31,8 +41,21 @@ targets:
     sources: 
       - StoryboardUIKitAppDelegate
       - Configs
+
+  SpotifyExample:
+    type: application
+    platform: iOS
+    sources: 
+      - SpotifyExample
+      - Configs
     dependencies:
       - framework: ./Frameworks/SpotifyiOS.xcframework
+
+  SpotifyPKCE:
+    type: application
+    platform: iOS
+    sources: 
+      - SpotifyPKCE
 
   SwiftUIUIKitAppDelegate:
     type: application
