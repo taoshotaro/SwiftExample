@@ -24,6 +24,16 @@ schemes:
         targets:
           SpotifyPKCE: all
 
+  SwiftUIUIKitAppDelegate:
+    build:
+      targets:
+        SwiftUIUIKitAppDelegate: all
+
+  MusicSeekBar:
+    build:
+      targets:
+        MusicSeekBar: all
+
 targets:
   StoryboardUIKitAppDelegate:
     type: application
@@ -46,4 +56,17 @@ targets:
     platform: iOS
     sources: 
       - SpotifyPKCE
+
+  SwiftUIUIKitAppDelegate:
+    type: application
+    platform: iOS
+    sources: 
+      - SwiftUIUIKitAppDelegate
+      - Configs
+
+  MusicSeekBar:
+    type: application
+    platform: iOS
+    sources: 
+      - MusicSeekBar
       - Configs
