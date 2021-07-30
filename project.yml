@@ -8,11 +8,6 @@ configFiles:
 options:
   groupSortPosition: top
 
-packages:
-  OAuthSwift:
-    url: https://github.com/OAuthSwift/OAuthSwift.git
-    from: 2.1.0
-
 schemes:
   StoryboardUIKitAppDelegate:
     build:
@@ -23,6 +18,11 @@ schemes:
     build:
       targets:
         SpotifyExample: all
+
+  SpotifyPKCE:
+    build:
+        targets:
+          SpotifyPKCE: all
 
 targets:
   StoryboardUIKitAppDelegate:
@@ -47,5 +47,3 @@ targets:
     sources: 
       - SpotifyPKCE
       - Configs
-    dependencies:
-      - package: OAuthSwift
